@@ -1,4 +1,22 @@
+
 :no_entry: [DEPRECATED]
+
+# ^^sure, but I'm going to make this work
+followed this [comment on the original repo issue](https://github.com/shuaiscott/zap2xml/issues/14#issuecomment-2765029439)
+but because something could happen to that I'll paste it here:
+```
+The image was pulling fine for me, but the script wasn't working because the zap2it service seems to have been shut down on 3/25. I found a comment on a news article that the URL simply changed to gracenote. So I did the following to get my kube container working again:
+
+    Fork this repo
+    Update main script line 158 to '$urlRoot = 'https://tvlistings.gracenote.com/';'
+    Create a dockerhub repo (or wherever you want to host your image)
+    Do a 'docker build -t user/repo .' followed by 'docker push user/repo'
+    Update your source image to your newly pushed image
+
+I didn't have to update any vars or anything, just that one liner seems to get everything working (for now anyway, hopefully it remains that way).
+```
+Thanks [bstock84](https://github.com/bstock84)
+
 
 # zap2xml
 Docker container for zap2xml
