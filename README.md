@@ -17,6 +17,11 @@ I didn't have to update any vars or anything, just that one liner seems to get e
 ```
 Thanks [bstock84](https://github.com/bstock84)
 
+# my steps
+1. change the urlRoot just as outlined in the comment
+2. build locally, no need to push anywhere: `docker image build -t everydaycombat/zap2xml:latest .`
+3. switch zap2xml docker run script in unraid repo to use my image
+
 
 # zap2xml
 Docker container for zap2xml
